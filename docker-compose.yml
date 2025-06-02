@@ -1,0 +1,29 @@
+services:
+
+  message-broker-ms:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - QUEUE_DB_HOST=postgres-commons-db
+      - QUEUE_DB_PORT=5432
+      - QUEUE_DB_USER=postgres
+      - QUEUE_DB_PASSWORD=postgres
+      - QUEUE_DB_NAME=commons
+      - ORDERS_MS_URL=http://orders-ms:3000
+      - PAYMENTS_MS_URL=http://payments-ms:3002
+      - PRODUCTS_MS_URL=http://products-ms:3001
+    networks:
+      - pickhealthy-net
+
+volumes:
+  postgres_data:
+
+networks:
+  pickhealthy-net:
+    external: true
+
+# Para reiniciar el volumen de postgres
+# docker-compose down
+# docker volume rm orders-ms_postgres_data
+# docker-compose up --build

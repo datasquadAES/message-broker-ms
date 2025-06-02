@@ -1,0 +1,24 @@
+{
+  "name": "@oerazoo/commons-ms",
+  "version": "1.0.11",
+  "description": "Librerias comunes",
+  "main": "main.js",
+  "scripts": {
+    "start": "nodemon src/main.js",
+    "dev": "nodemon src/main.js"
+  },
+  "author": "Cristhian Reyes - dataSquad",
+  "license": "ISC",
+  "dependencies": {
+    "@oerazoo/commons-ms": "github:oerazoo/pickHealthy_commons",
+    "axios": "^1.9.0",
+    "dotenv": "^16.5.0",
+    "nodemon": "^3.1.10",
+    "pg": "^8.16.0",
+    "uuid": "^11.1.0"
+  },
+  "devDependencies": {
+    "jasmine-core": "^5.7.1",
+    "jest": "^29.7.0"
+  }
+}
