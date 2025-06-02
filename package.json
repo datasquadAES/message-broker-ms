@@ -4,7 +4,7 @@
   "description": "Librerias comunes",
   "main": "main.js",
   "scripts": {
-    "start": "nodemon src/main.js",
+    "start": "node src/main.js",
     "dev": "nodemon src/main.js"
   },
   "author": "Cristhian Reyes - dataSquad",
