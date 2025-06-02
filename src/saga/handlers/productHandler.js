@@ -8,7 +8,7 @@ const queueConfig = {
   host: process.env.QUEUE_DB_HOST || '',
   database: process.env.QUEUE_DB_NAME || '',
   password: process.env.QUEUE_DB_PASSWORD || '',
-  port: process.env.QUEUE_DB_PORT ? parseInt(process.env.QUEUE_DB_PORT) : 5434.
+  port: process.env.QUEUE_DB_PORT ? parseInt(process.env.QUEUE_DB_PORT) : 5434,
   ssl: { require: true, rejectUnauthorized: false }
 };
 const queueManager = new QueueManager(queueConfig);
